@@ -3,7 +3,7 @@ from django.db import models
 class Ccont(models.Model):
     title = models.CharField(max_length=50)
     textContent = models.TextField(null=True, blank=True)
-    photo = models.ImageField(null=True, blank=True)
+    photo = models.TextField(null=True, blank=True)
     video = models.TextField(null=True, blank=True)
     published = models.DateTimeField(auto_now_add=True, db_index=True)
     rubric = models.ForeignKey('Rubric', null=True, on_delete=models.PROTECT, verbose_name='Рубрика')
